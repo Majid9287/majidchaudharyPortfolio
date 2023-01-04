@@ -2,6 +2,8 @@ import React from "react";
 
 import Lottie from "lottie-react";
 import Animation from "../lotties/servi.json";
+import "animate.css/animate.min.css";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 export default function Services() {
   
   const hangeStyles = (click) => {
@@ -12,9 +14,12 @@ export default function Services() {
     <div id="services">
       <div className="container">
         <h1 className="service-title">My Service</h1>
+        <AnimationOnScroll  animateOnce={true}  animateIn="animate__fadeInRightBig">
         <div className="service_img">
       <div className="img"> <Lottie animationData={Animation} loop={true} /></div>
         </div>
+        </AnimationOnScroll>
+        <AnimationOnScroll  animateOnce={true}  animateIn="animate__fadeInLeftBig">
         <div className="services-list">
           <div onClick={ ()=>hangeStyles("more")}>
             <i className="fa-solid fa-code"></i>
@@ -61,6 +66,7 @@ export default function Services() {
            
           </div>
         </div>
+        </AnimationOnScroll>
       </div>
     </div>
   );

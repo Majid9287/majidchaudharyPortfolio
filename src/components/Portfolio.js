@@ -4,16 +4,21 @@ import work2 from "./images/work-2.png";
 import work3 from "./images/WORK-3.jpeg";
 import Lottie from "lottie-react";
 import Animation from "../lotties/work.json";
+import "animate.css/animate.min.css";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 export default function portfolio() {
   return (
     <div id="portfolio">
       <div className="container">
         <h1 className="service-title">My Work</h1>
         <div className="service_img">
+        
           <div className="img">
-            {" "}
+          <AnimationOnScroll  animateOnce={true}  animateIn="animate__fadeInRightBig">
             <Lottie animationData={Animation} loop={true} />
+            </AnimationOnScroll>
           </div>
+       
         </div>
         <div className="work-list">
           <div className="work">
